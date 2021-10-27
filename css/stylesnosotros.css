@@ -1,10 +1,15 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
   background: url(../img/bg.jpg) no-repeat center top;
   background-size: cover;
-  font-family: sans-serif;
+  
   height: 100vh;
+  font-family: 'Poppins', sans-serif;
 }
 
 .login-box {
