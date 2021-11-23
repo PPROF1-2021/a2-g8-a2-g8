@@ -25,14 +25,17 @@ p {
 }
 
 
+
+
+
 nav {
   float: left;
-    margin: 0%;
-    left: 35%;
-
-    transform: translatex(-50%);
-    position: absolute;/* Desplazamos el nav hacia la izquierda */
-
+  margin: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  position: relative;/* Desplazamos el nav hacia la izquierda */
+  background: rgba(0,0,0,0.3);
+  width: 100%;
 }
 
 nav ul {
@@ -66,8 +69,6 @@ nav ul li:hover {
   margin: auto;
   overflow:hidden;
 }
-
-
 
 
 

@@ -5,10 +5,10 @@
 body {
   margin: 0;
   padding: 0;
-  width: 500px;
-  height: 300px;
+widht: 500px;
+height: 300px;
 
-  background: url(../img/bg.jpg) no-repeat center top;
+  background: url(../img/bg.jpg) repeat center top;
   background-size: 100%;
   }
 
@@ -84,12 +84,21 @@ nav ul li:hover {
 
 
 
+
+
+
+
+
+
+
+
+
 .login-box {
-  width: 320px;
-  height: 750px;
+  width: 80%;
+  height: 90%;
   background: #000;
   color: #fff;
-  top: 80%;
+  top: 70%;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -173,7 +182,18 @@ nav ul li:hover {
   font-size: 16px;
  }
 
+ .login-box input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #b80f22;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
 
-  
-    
-  
+.login-box input[type="submit"]:hover {
+  cursor: pointer;
+  background: #ffc107;
+  color: #000;
+}
