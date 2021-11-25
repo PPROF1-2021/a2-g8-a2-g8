@@ -15,7 +15,7 @@
 </head>
   <body>
 
-    <div class="login-box">
+    <div class="login-box" id="formulario">
       <img src="img/logo.png" class="avatar" alt="Avatar Image">
       <h1>Registrarse</h1>
       
@@ -26,20 +26,20 @@
               <div class="form-row">
                 <div class="col-md-4 mb-3">
                   <label for="Nombre de usuario">Nombre de usuario</label>
-                  <input id="Nombre de usuario" placeholder="Ingresar nombre de usuario" value="" required>
+                  <input type="text" class="formulario__input" name="usuario" id="Nombre de usuario" placeholder="Usuario (2-16 caracteres)" value="" required minlength="2" maxlength="16">
                   <div class="valid-feedback">Ok!</div>
-                  <div class="invalid-feedback">Complete el campo</div> 
+                  <div class="invalid-feedback">Complete el campo (2-16 caracteres)</div> 
                 </div>   
                 <div class="col-md-4 mb-3">
                   <label for="Ingrese su fecha de nacimiento">Ingrese su fecha de nacimiento</label>
-                  <input id="Ingrese su fecha de nacimiento" placeholder="xxxx/xx/xx" value="" required>
+                  <input type="date" class="formulario__input" name="Ingrese su fecha de nacimiento" id="Ingrese su fecha de nacimiento" placeholder="" value="" required>
                   <div class="valid-feedback">Ok!</div>
                   <div class="invalid-feedback">Complete el campo</div>   
                 </div>
 
 <div class="col-md-4 mb-3">
                   <label for="Ingrese su pais">Ingrese su pais</label>
-                  <input id="Ingrese su pais" placeholder="Ingresar pais" value="" required>
+                  <input type="text" class="formulario__input" name="Ingrese su pais" id="Ingrese su pais" placeholder="Ingresar pais" value="" required>
                   <div class="valid-feedback">Ok!</div>
                   <div class="invalid-feedback">Complete el campo</div>   
                 </div>
@@ -47,7 +47,7 @@
 
 <div class="col-md-4 mb-3">
                   <label for="Ingrese su provincia">Ingrese su provincia</label>
-                  <input id="Ingrese su provincia" placeholder="Ingresar provincia" value="" required>
+                  <input type="text" class="formulario__input" name="Ingrese su provincia" id="Ingrese su provincia" placeholder="Ingresar provincia" value="" required>
                   <div class="valid-feedback">Ok!</div>
                   <div class="invalid-feedback">Complete el campo</div>   
                 </div>
@@ -56,15 +56,15 @@
 
 <div class="col-md-4 mb-3">
                   <label for="Contraseña">Contrase&ntildea</label>
-                  <input id="Contraseña" placeholder="" value="" required>
+                  <input type="password" class="formulario__input" name="Contraseña" id="Contraseña" placeholder="4-16 caracteres" value="" required minlength="4" maxlength="16">
                   <div class="valid-feedback">Ok!</div>
-                  <div class="invalid-feedback">Complete el campo</div>   
+                  <div class="invalid-feedback">Complete el campo (4-16 caracteres)</div>   
                 </div>
 
 
 <div class="col-md-4 mb-3">
                   <label for="Mail">Mail</label>
-                  <input id="Mail" placeholder="" value="" required>
+                  <input type="text" class="formulario__input" name="Mail" id="Mail" placeholder="" value="" required>
                   <div class="valid-feedback">Ok!</div>
                   <div class="invalid-feedback">Complete el campo.</div>   
                 </div>
@@ -95,6 +95,8 @@
 
 <script type="text/javascript" src="js/funcionesgrupo99.js"></script>
 
+
+<script src="funcionesgrupo8.js"></script>
   </body>
 
 
