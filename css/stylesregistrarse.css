@@ -26,9 +26,9 @@ p {
 }
 
 header {
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,50,0,0);
   width: 100%;
-  
+  text-decoration: none;
   position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -38,6 +38,7 @@ nav {
   float: left;
     margin: 0;
     left: 50%;
+text-decoration: none;
     transform: translatex(-50%);
     position: relative;/* Desplazamos el nav hacia la izquierda */
 
@@ -45,12 +46,14 @@ nav {
 
 nav ul {
   list-style: none;
+text-decoration: none;
   overflow: hidden; /* Limpiamos errores de float */
 }
 
 nav ul li {
   float: left;
   font-family: Arial black, sans-serif;
+text-decoration: none;
   font-size: calc(0.5rem + 1vw);
 }
 
@@ -135,7 +138,7 @@ nav ul li:hover {
   margin-bottom: 20px;
 }
 
-.login-box input[type="text"], .login-box input[type="password"] {
+.login-box input[type="text"], .login-box input[type="password"], .login-box input[type="email"] {
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;
@@ -154,6 +157,8 @@ nav ul li:hover {
   font-size: 18px;
   border-radius: 20px;
 }
+
+
 
 .login-box input[type="submit"]:hover {
   cursor: pointer;
@@ -182,7 +187,38 @@ nav ul li:hover {
   font-size: 16px;
  }
 
-
+footer {
+  background: rgba(0,255,0,0.3);
+background-size:5%
+  font-family: 'beautyinthestardust'; src: url('../fonts/beautyinthestardust.ttf') format("truetype");
+   font-weight: normal;
+   font-style: normal;
+  position: absolute;
+top: 110%;
+left:0%;
   
+  color: white;
+}
+
+
+  footer a {
+
+  margin: 0;
+
+top: -20%;
+right: 2%;
+left: 2%;
+bottom: 5%;
+
+
+  text-align: center;
+  font-size: calc(0.2rem + 1vw);
+
+color: #fff;
+
+
+
+}
+
     
   

@@ -1,18 +1,48 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
+const fechaNacimiento = document.getElementById("fechaNacimiento");
+const edad = document.getElementById("edad");
+
+const calcularEdad = (fechaNacimiento) => {
+    const fechaActual = new Date();
+    const anoActual = parseInt(fechaActual.getFullYear());
+    const mesActual = parseInt(fechaActual.getMonth()) + 1;
+    const diaActual = parseInt(fechaActual.getDate());
+
+    // 2016-07-11
+    const anoNacimiento = parseInt(String(fechaNacimiento).substring(0, 4));
+    const mesNacimiento = parseInt(String(fechaNacimiento).substring(5, 7));
+    const diaNacimiento = parseInt(String(fechaNacimiento).substring(8, 10));
+
+    let edad = anoActual - anoNacimiento;
+    if (mesActual < mesNacimiento) {
+        edad--;
+    } else if (mesActual === mesNacimiento) {
+        if (diaActual < diaNacimiento) {
+            edad--;
         }
-        form.classList.add('was-validated');
-      }, false);
+    }
+    return edad;
+};
+
+window.addEventListener('load', function () {
+
+    fechaNacimiento.addEventListener('change', function () {
+        if (this.value) {
+            edad.innerText = `Su edad es ${calcularEdad(this.value)} años`;
+        }
     });
-  }, false);
-})();
+
+});
+
+function validar(e) {
+swal({title: "Su consulta ha sido enviada", 
+text: "Muchas gracias!!", 
+icon: "success"});
+return false;
+}
+
+function validar1(e) {
+swal({title: "USUARIO NO REGISTRADO", 
+text: "Intente nuevamente", 
+icon: "warning"});
+return false;
+}
